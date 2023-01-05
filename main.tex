@@ -1,0 +1,158 @@
+\documentclass[]{tukseminar}
+
+% Specify that the source file has UTF8 encoding
+\usepackage[utf8]{inputenc}
+% Set up the document font; font encoding (here T1) has to fit the used font.
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% Load language spec
+\usepackage[american]{babel}
+% German article --> ngerman (n for »neue deutsche Rechtschreibung«)
+% British English --> english
+
+% Ffor bibliography and \cite
+\usepackage{cite}
+
+% AMS extensions for math typesetting
+\usepackage[intlimits]{mathtools}
+\usepackage{amssymb}
+% ... there are many more ...
+
+
+% Load \todo command for notes
+\usepackage{todonotes}
+% Sebastian's favorite command for large inline todonotes
+% Caveat: does not work well with \listoftodos
+\newcommand\todoin[2][]{\todo[inline, caption={2do}, #1]{
+		\begin{minipage}{\linewidth-1em}\noindent\relax#2\end{minipage}}}
+
+\newcommand{\funfact}[2]{\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \textbf{#1:} #2
+    }%
+}}
+% Load \includegraphics command for including pictures (pdf or png highly recommended)
+\usepackage{graphicx}
+
+% Typeset source/pseudo code
+\usepackage{listings}
+
+% Load TikZ library for creating graphics
+% Using the PGF/TikZ manual and/or tex.stackexchange.com is highly adviced.
+\usepackage{tikz}
+% Load tikz libraries needed below (see the manual for a full list)
+\usetikzlibrary{automata,positioning}
+
+% Load \url command for easier hyperlinks without special link text
+\usepackage{url}
+
+% Load support for links in pdfs
+\usepackage{hyperref}
+
+% Defines default styling for code listings
+\definecolor{gray_ulisses}{gray}{0.55}
+\definecolor{green_ulises}{rgb}{0.2,0.75,0}
+\lstset{%
+  columns=flexible,
+  keepspaces=true,
+  tabsize=3,
+  basicstyle={\fontfamily{tx}\ttfamily\small},
+  stringstyle=\color{green_ulises},
+  commentstyle=\color{gray_ulisses},
+  identifierstyle=\slshape{},
+  keywordstyle=\bfseries,
+  numberstyle=\small\color{gray_ulisses},
+  numberblanklines=false,
+  inputencoding={utf8},
+  belowskip=-1mm,
+  escapeinside={//*}{\^^M} % Allow to set labels and the like in comments
+}
+
+% Defines a custom environment for indented shell commands
+\newenvironment{displayshellcommand}{%
+	\begin{quote}%
+	\ttfamily%
+}{%
+	\end{quote}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Title of the topic}
+\event{Data Science and its Applications WiSe 2022/23}
+\author{Name 1, Name 2, Name 3
+  \institute{Technische Universität Kaiserslautern, Department of Computer Science}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+    Give an abstract of your paper. You may also give a very short explanation why it could be useful for the reader, i.~e.~ a short motivation.
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+\label{sec:introduction}
+
+The introduction includes the motivation for the presented work.
+In general, the author will explain the assigned topic and why it is of interest in the research world.
+The most important thing is to explain the overview of the subset of papers taken to write this report: A summary of the field - what it is, where it came from, what it can be used for. However, if the problem has been divided into parts as a result of intra-group discussions, the authors should mention that distinctively along with a succinct explanation of the different divisions.
+Finally, the section can be closed by giving an overview of the rest of the paper.\
+
+E.~g.~ ``The rest of the paper is structured as follows:
+Section \ref{sec:literatureSurvey} gives an overview of related work and existing solutions of the addressed problem. $\ldots$''
+
+\section{Literature Survey}
+\label{sec:literatureSurvey}
+
+This is the main section of the report where the authors of this report write a short summary for each \textbf{main} paper that was found - A proper citation,
+publication venue, whether the author provides code and/or data (if yes, link to
+both), methods used, main findings and results, and a comment by student(s). For each paper one paragraph can be written encapsulating all the details listed above. If graphs, tables, etc., is used, authors should provide proper citation and titles. 
+
+\subsection{Main Paper 1}
+\subsection{Main Paper 2}
+\subsection{...}
+\subsection{Main Paper n}
+
+\section{Additional Resources}
+\label{sec:additionalResources}
+The authors of this report are expected to present a list of additional papers (except the main papers covered in the previous section) and why they might be important for the field. E.g. If the student(s) think some paper might be useful as a next step in the development of the field, cite it and say why. These can be written in a paragraph or a list of subsections like Section: \ref{sec:literatureSurvey}. 
+
+\section{Conclusions}
+\label{sec:conclusions}
+Authors of this report are expected to write about the conclusions they draw from the literature survey. This section explains the readers your understanding of the topic after the survey and your critical views on the information assimilated in the scope of the literature survey. 
+
+This section is the last section in the seminar report.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{references}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

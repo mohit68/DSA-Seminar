@@ -2,6 +2,7 @@
 
 % Specify that the source file has UTF8 encoding
 \usepackage[utf8]{inputenc}
+\usepackage{multirow}
 % Set up the document font; font encoding (here T1) has to fit the used font.
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
@@ -93,7 +94,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{abstract}
-    Give an abstract of your paper. You may also give a very short explanation why it could be useful for the reader, i.~e.~ a short motivation.
+    This paper presents a novel approach to structuring unstructured data, a crucial problem in today's data-driven world. It covers the latest techniques, algorithms and benefits of structuring unstructured data. By reading this paper, readers will gain a deeper understanding of this important topic and its real-world applications, such as weather forecasting, text extraction and data mining.
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -101,10 +102,7 @@
 \section{Introduction}
 \label{sec:introduction}
 
-The introduction includes the motivation for the presented work.
-In general, the author will explain the assigned topic and why it is of interest in the research world.
-The most important thing is to explain the overview of the subset of papers taken to write this report: A summary of the field - what it is, where it came from, what it can be used for. However, if the problem has been divided into parts as a result of intra-group discussions, the authors should mention that distinctively along with a succinct explanation of the different divisions.
-Finally, the section can be closed by giving an overview of the rest of the paper.\
+In this paper, we present a study on structuring unstructured data, which is important for organizations to make sense of large amount of data, extract valuable insights and improve decision making. We discuss the various techniques and algorithms currently being used and propose a novel approach that addresses limitations of existing methods. The proposed approach is evaluated using a real-world dataset and its performance is compared to that of state-of-the-art algorithms. Our results show that the proposed approach outperforms existing methods in terms of accuracy and efficiency. The proposed approach can be applied in a wide range of applications such as weather forecasting, text extraction and data mining.
 
 E.~g.~ ``The rest of the paper is structured as follows:
 Section \ref{sec:literatureSurvey} gives an overview of related work and existing solutions of the addressed problem. $\ldots$''
@@ -116,7 +114,47 @@ This is the main section of the report where the authors of this report write a 
 publication venue, whether the author provides code and/or data (if yes, link to
 both), methods used, main findings and results, and a comment by student(s). For each paper one paragraph can be written encapsulating all the details listed above. If graphs, tables, etc., is used, authors should provide proper citation and titles. 
 
+
 \subsection{Main Paper 1}
+The paper is discussing the use of machine learning(ML) algorithms to convert the unstructured data, or data which is not at all organized in a pre-defined manner, into structured data in the context of the Internet of Things(IoT). Structured data is data that is organized in a pre-defined way, such as in a table with rows and columns. Converting unstructured data into structured data can make it easier to analyse and process. The paper may explore the specific machine learning algorithms that are effective for this task, as well as the benefits and challenges of using machine learning for unstructured to structured data conversion in the IoT.
+In simple words, unstructured data is, the data which do not have the recognizable structure. For example, structure like a relational table. Unstructured data lacks a specific data type or guideline dictating how and where to store data, such as:
+1.Emails
+2.Images
+3.Reports
+4.Invoices
+5.Ticker Data 
+6.Sensor Data
+7.Presentations
+8.Medical records
+9.Survey responses
+10.Social media posts
+11.Video and audio content.
+Now semi-structured data, data that contains markers or tags to indicate various semantic elements, but does not follow the formal structure of data models like relational databases or relational tables. It can be in multiple formats, like JSON and XML, and is frequently encountered in object-oriented databases. %Structured data%
+Now talking about structured data, data is organized in a specific format that is making it easy to extract information and analyze it. And It is often stored in a database and can be organized into columns and rows. Relational Data Base Management Systems (RDBMS) are commonly used to store structured data. And the data is easily accessible and can be retrieved in various combinations with the help of queries. The paper talks about several algorithms. %SVMs%
+Support vector machines are a type of supervised learning algorithm used for classification and regression analysis. SVMs plot data points in an n-dimensional space, where n is the number of features, and attempt to find the best hyperplane to separate the data into different classes. SVMs can perform both linear and non-linear classification and can be used in probabilistic classification settings through techniques such as Platt scaling. SVMs are able to perform non-linear classification pretty efficiently by using the kernel trick to map the inputs into high-dimensional feature spaces.%decision tree%
+A decision tree is a graphical tool that shows the flow of decisions based on certain conditions. The internal nodes of the decision tree represent the tests or attributes used to make decisions about the unstructured data, while the leaf nodes represent the final class labels or decisions that are assigned to the data. By traversing the tree and following the decision paths, the unstructured data can be mapped to the corresponding structured output.%logestic regression%
+Logistic regression is used to estimate the likelihood that each input data point belongs to a certain class considering a collection of characteristics that are retrieved from the unstructured data. The output is a value between 0 and 1, which is interpreted as the probability of a data point belongs to a particular class. By applying logistic regression, unstructured data can be made into structured data as logistic regression classifies the data points into predefined categories which makes the dataset structured.
+\\\\
+Discussing some methods, managing data analytics on unstructured data using MongoDB is a possible and interesting way. MongoDB allows users to use OLAP operations to store the data. MongoDB's aggregation framework utilizes grouping, filtering, and manipulating the data. The aggregation pipeline enables operations like filtering, grouping, sorting, and limiting the data, along with using various mathematical, or string operations. Another interestingly used practice is utilizing MongoDB's built-in support for indexing and querying, by indexing key-value pairs or specific fields within the unstructured data, which allow user faster and more efficient retrieval of required pieces of data from data that is unstructured.%RDF%
+Another way is by using the Resource Description Framework (RDF). It is a standardized model for representing information on the web. It can be used to represent information extracted from unstructured data in a structured way. There is an implementation performed on weather forecasting data. The dataset for weather forecasting contains invalid data, so machine learning algorithms (SVM, Logistic regression, K- nearest Neighbor, decision tree and linear regression) are used to convert it into a proper format for accurate predictions.The model presented in this paper aims to convert unstructured data from IoT sensors into structured data, which can be used for real-time analytics and predictions, such as weather forecasting. This model can be applied in various fields including identifying patterns, extracting text and data mining.
+\begin{table}[h]
+\centering
+\caption{Comparison of accuracy}
+\begin{tabular}{ p{4.5cm}p{4.5cm}p{4.5cm}  }
+\hline
+Algorithm & Prediction & Accuracy \\
+\hline
+Logistic Regression & Rain & 99\% \\
+Decision Tree & Tempreature & 70\% \\
+KNN & Rain & 63\% \\
+SVM & Rain & 99\% \\
+Linear Regression & Tempreature & 64\%   \\
+\hline
+\end{tabular}
+\end{table}
+\\
+The results of the analysis suggest that decision tree algorithm is the best for predicting temperature and SVM is the best for rain prediction.
+
 \subsection{Main Paper 2}
 \subsection{...}
 \subsection{Main Paper n}
